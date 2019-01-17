@@ -1,104 +1,41 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+def password():
+    typeOfPassword = int(input(''' please choose type of password:
+1. weak
+2. medium
+3. strong
+(choose respective number) ''' ))
+    import random
+    import string
+    i=0
+    lowerCase= string.ascii_lowercase
+    lowerCase.split()
+    upperCase= string.ascii_uppercase
+    upperCase.split()
+    password= random.choice(lowerCase)
+    if typeOfPassword == 1:
+        
+        while i<6:
+            
+            password= password + random.choice(lowerCase)
+            i += 1
+        print('password is: ', password)
+        return 
 
-# C extensions
-*.so
+    elif typeOfPassword == 2:
+        
+        while i<6:
+            number=str(random.randint(1,100))
+            password= password + random.choice(lowerCase)+number
+            i += 1
+        print('password is: ', password)
+        return
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
+    elif typeOfPassword == 3:
+        
+        while i<10:
+            number=str(random.randint(1,1000))
+            password= password + random.choice(lowerCase)+number+random.choice(upperCase)
+            i += 1
+        print('password is: ', password)
+        return 
+        
